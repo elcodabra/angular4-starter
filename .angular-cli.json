@@ -8,7 +8,7 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
-        "assets",
+        { "glob": "**/*", "input": "./assets/img/", "output": "./assets/img/" },
         "favicon.ico"
       ],
       "index": "index.html",
@@ -19,7 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "./assets/css/fonts.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
