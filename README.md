@@ -1,6 +1,9 @@
-# Angular4Starter
+# Angular4 Starter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.6.
+- Angular CLI
+- Webpack 2
+- Node JS
+- Typescript
 
 ## Development server
 
