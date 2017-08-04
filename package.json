@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
+    "ng": "ng",
+    "start:ng": "ng serve --environment local --host 0.0.0.0 --port 8080",
     "start": "webpack-dev-server --config config/webpack.local.js --inline --progress --port=8080",
     "build": "npm run build:prod",
     "build:local": "npm run clean:dist && webpack --config config/webpack.local.js --env.dev",
