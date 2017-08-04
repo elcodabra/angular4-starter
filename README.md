@@ -30,6 +30,10 @@ Run `npm run build:dev`. And open `dist/index.html`.
 
 Run `npm run build` or `npm run build:prod` to build the project. The build artifacts will be stored in the `dist/` directory.
 
+## Node server
+
+Run `npm run start:server` for a node server both for dev or prod build dist. Navigate to `http://localhost:8080/`. 
+
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).

@@ -4,8 +4,9 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start:ng": "ng serve --environment local --proxy-config proxy.conf.json --host 0.0.0.0 --port 8080",
     "start": "webpack-dev-server --config config/webpack.local.js --inline --progress --port=8080",
+    "start:ng": "ng serve --environment local --proxy-config proxy.conf.json --host 0.0.0.0 --port 8080",
+    "start:server": "nodemon ./server.js",
     "build": "npm run build:prod",
     "build:local": "npm run clean:dist && webpack --config config/webpack.local.js --env.dev",
     "build:dev": "npm run clean:dist && webpack --config config/webpack.dev.js --env.dev",
@@ -27,7 +28,9 @@
     "@angular/platform-browser": "^4.2.2",
     "@angular/platform-browser-dynamic": "^4.2.2",
     "@angular/platform-server": "^4.2.2",
+    "compression": "^1.7.0",
     "core-js": "^2.4.1",
+    "express": "^4.15.3",
     "rxjs": "^5.4.1",
     "zone.js": "^0.8.14"
   },
@@ -54,6 +57,7 @@
     "karma-coverage-istanbul-reporter": "^1.2.1",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "nodemon": "^1.11.0",
     "protractor": "~5.1.2",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.1",
