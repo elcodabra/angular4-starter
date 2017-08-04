@@ -4,7 +4,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### angular-cli development server
+
+Run `npm run start` for a angular-cli dev server. Navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
+
+### webpack-dev-server
+
+Run `npm run start:dev` for a dev server. Navigate to `http://localhost:8080/`. The app will automatically reload if you change any of the source files.
+
+### build dev dist
+
+Run `npm run build:dev`. And open `dist/index.html`.
 
 ## Code scaffolding
 
@@ -12,7 +22,13 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+### dev dist
+
+Run `npm run build:dev`. And open `dist/index.html`.
+
+### prod dist
+
+Run `npm run build` or `npm run build:prod` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
 
