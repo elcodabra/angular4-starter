@@ -3,6 +3,7 @@ const webpackMerge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const { AotPlugin } = require('@ngtools/webpack');
 const commonConfig = require('./webpack.common.js');
+const proxyConf = require('../proxy.conf.json');
 
 module.exports = webpackMerge(commonConfig, {
   devtool: 'cheap-module-eval-source-map',
@@ -35,5 +36,6 @@ module.exports = webpackMerge(commonConfig, {
   devServer: {
     historyApiFallback: true,
     stats: 'minimal',
+    proxy: proxyConf
   }
 });

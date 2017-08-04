@@ -1,0 +1,6 @@
+{
+  "/backend": {
+    "target": "http://amazon.com",
+    "secure": false
+  }
+}
