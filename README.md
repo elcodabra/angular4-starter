@@ -1,9 +1,8 @@
 # Angular4 Starter
 
-- Angular CLI
-- Webpack 2
-- Node JS
-- Typescript
+- Angular 4 + Typescript
+- Webpack 3 or Angular CLI
+- Node JS / Express
 
 ## Development server
 
