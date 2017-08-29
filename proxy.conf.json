@@ -1,6 +1,6 @@
 {
   "/backend": {
-    "target": "http://amazon.com",
+    "target": "http://jsonplaceholder.typicode.com",
     "secure": false
   }
 }

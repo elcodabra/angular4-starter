@@ -1,12 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RoutingModule } from "./routing.module";
+import { RoutingModule } from './routing.module';
+import { HttpModule } from '@angular/http';
+
+import { BackendService } from './service/backend.service';
+import { ApiService } from './service/api.service';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { UsersComponent } from './components/users/users.component';
 
 @NgModule({
   declarations: [
@@ -14,13 +19,15 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     AboutComponent,
     HeaderComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    UsersComponent
   ],
   imports: [
     RoutingModule,
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [ ApiService, BackendService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
