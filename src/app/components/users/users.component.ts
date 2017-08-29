@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Params, ActivatedRoute} from '@angular/router';
-import {BackendService} from "../../service/backend.service";
+import {BackendService} from "../../services/backend.service";
 
 @Component({
   selector: 'app-users',

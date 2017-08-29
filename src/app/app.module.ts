@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { RoutingModule } from './routing.module';
 import { HttpModule } from '@angular/http';
 
-import { BackendService } from './service/backend.service';
-import { ApiService } from './service/api.service';
+import { BackendService } from './services/backend.service';
+import { ApiService } from './services/api.service';
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './components/about/about.component';
