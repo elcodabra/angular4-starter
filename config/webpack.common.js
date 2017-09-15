@@ -19,6 +19,8 @@ module.exports = {
     styles: [
       './src/styles.css',
       './src/assets/css/fonts.css',
+      './src/assets/css/bootstrap.min.css',
+      './node_modules/font-awesome/css/font-awesome.min.css',
     ]
   },
 

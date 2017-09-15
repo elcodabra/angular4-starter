@@ -1,7 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RoutingModule } from './routing.module';
 import { HttpModule } from '@angular/http';
+import { FormsModule }   from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import { RoutingModule } from './routing.module';
 
 import { BackendService } from './services/backend.service';
 import { ApiService } from './services/api.service';
@@ -11,7 +12,8 @@ import { AboutComponent } from './components/about/about.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { UsersComponent } from './components/users/users.component';
+import { ListTweetsComponent } from './components/tweets/list/tweets-list.component';
+import { NewTweetComponent } from './components/tweets/new/new-tweet.component';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,14 @@ import { UsersComponent } from './components/users/users.component';
     HeaderComponent,
     HomeComponent,
     PageNotFoundComponent,
-    UsersComponent
+    ListTweetsComponent,
+    NewTweetComponent
   ],
   imports: [
     RoutingModule,
     BrowserModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [ ApiService, BackendService ],
   bootstrap: [ AppComponent ]

@@ -3,13 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { UsersComponent } from "./components/users/users.component";
+import { ListTweetsComponent } from './components/tweets/list/tweets-list.component';
 
 const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'home', component: HomeComponent },
-  { path: 'users/:id', component: UsersComponent },
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: 'tweets', component: ListTweetsComponent },
+  { path: '', redirectTo: '/tweets', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent },
 ];
 

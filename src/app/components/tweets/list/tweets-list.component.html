@@ -1,0 +1,24 @@
+<div>
+  <ul class="list-unstyled">
+    <li class="media">
+      <img class="img-thumbnail rounded-circle mr-3" [src]="currentUser?.img" />
+      <div class="media-body">
+        <app-new-tweet placeholder="Add your text..." (add)="onAdd($event)"></app-new-tweet>
+      </div>
+    </li>
+    <li class="media" *ngFor="let row of tweets; let i = index">
+      <img class="img-thumbnail rounded-circle mr-3" [src]="row?.account?.img || currentUser.img" />
+      <div class="media-body">
+        <h5 class="mt-0 mb-1">{{row?.account?.fullName || "You"}}</h5>
+        <p class="text-muted">Posted at: {{row.createdAt}}</p>
+        {{row.content}}
+        <div class="mt-2">
+          <a href="#">
+            <span class="fa fa-heart-o"></span>
+          </a>
+          <span>{{row.likes || 0}}</span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>

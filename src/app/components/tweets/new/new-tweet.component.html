@@ -1,0 +1,11 @@
+<form #regForm="ngForm" (ngSubmit)="onAdd()">
+  <div class="form-group">
+      <textarea class="form-control" type="text" id="content" aria-describedby="content-error"
+             required maxlength="20"
+             placeholder={{placeholder}}
+             [(ngModel)]="model.content" name="content">
+      </textarea>
+      <small id="content-error" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <button type="submit" class="btn btn-primary" [disabled]="!regForm.form.valid">Submit</button>
+</form>

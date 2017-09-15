@@ -1,0 +1,37 @@
+# project: cj7j4hfua06ub0123qy0zawpi
+# version: 2
+
+type File implements Node {
+  contentType: String!
+  createdAt: DateTime!
+  id: ID! @isUnique
+  name: String!
+  secret: String! @isUnique
+  size: Int!
+  updatedAt: DateTime!
+  url: String! @isUnique
+}
+
+type Tweet implements Node {
+  account: UserAccount @relation(name: "UserAccountOnTweet")
+  content: String!
+  createdAt: DateTime!
+  id: ID! @isUnique
+  updatedAt: DateTime!
+}
+
+type User implements Node {
+  createdAt: DateTime!
+  id: ID! @isUnique
+  updatedAt: DateTime!
+}
+
+type UserAccount implements Node {
+  createdAt: DateTime!
+  fullName: String!
+  id: ID! @isUnique
+  img: String
+  shortName: String!
+  tweets: [Tweet!]! @relation(name: "UserAccountOnTweet")
+  updatedAt: DateTime!
+}
