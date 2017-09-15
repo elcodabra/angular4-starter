@@ -7,7 +7,7 @@ import {BackendService} from "../../../services/backend.service";
   styleUrls: ['./tweets-list.component.css']
 })
 export class ListTweetsComponent implements OnInit {
-  currentUser = {id: '11', img:'https://d30y9cdsu7xlg0.cloudfront.net/png/148483-200.png'};
+  currentUser = {img:'https://d30y9cdsu7xlg0.cloudfront.net/png/148483-200.png'};
   tweets = [];
 
   constructor(private backendService: BackendService) { }
@@ -22,9 +22,12 @@ export class ListTweetsComponent implements OnInit {
   }
 
   onAdd(tweet) {
-    this.backendService.addTweet(Object.assign({}, tweet, { account: this.currentUser.id }))
+    this.backendService.addTweet(tweet)
       .then((data) => {
-        if (data) this.tweets.unshift(tweet);
+        if (data && data.createTweet) this.tweets.unshift(data.createTweet);
       })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 }

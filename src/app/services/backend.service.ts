@@ -43,8 +43,10 @@ export class BackendService {
       createTweet(
         content: "${content}"
       ) {
-        id,
+        id
+        content
         createdAt
+        updatedAt
       }
     }
   `);

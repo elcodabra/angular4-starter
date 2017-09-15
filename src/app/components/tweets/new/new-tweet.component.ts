@@ -8,7 +8,7 @@ import {BackendService} from "../../../services/backend.service";
 export class NewTweetComponent implements OnInit {
   @Input() placeholder: string = "";
   @Output() add = new EventEmitter<any>();
-  model = {content: '', account: 'cj7iuelus00ug0190ckhvaqc4'};
+  model = {content: ''};
 
   constructor() { }
 

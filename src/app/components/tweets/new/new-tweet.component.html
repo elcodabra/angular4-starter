@@ -1,11 +1,15 @@
 <form #regForm="ngForm" (ngSubmit)="onAdd()">
   <div class="form-group">
-      <textarea class="form-control" type="text" id="content" aria-describedby="content-error"
-             required maxlength="20"
-             placeholder={{placeholder}}
-             [(ngModel)]="model.content" name="content">
-      </textarea>
-      <small id="content-error" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <textarea
+      type="text" name="content"
+      required
+      [ngClass]="{'form-control':true,'is-invalid':!regForm.form.valid && regForm.form.touched}"
+      placeholder={{placeholder}}
+      [(ngModel)]="model.content">
+    </textarea>
+    <div class="invalid-feedback" *ngIf="!regForm.form.valid && regForm.form.touched">
+      Field is required
+     </div>
   </div>
   <button type="submit" class="btn btn-primary" [disabled]="!regForm.form.valid">Submit</button>
 </form>
