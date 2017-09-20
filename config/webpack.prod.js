@@ -9,7 +9,7 @@ const commonConfig = require('./webpack.common.js');
 const ENV = process.env.NODE_ENV = process.env.ENV = 'production';
 
 module.exports = webpackMerge(commonConfig, {
-  devtool: 'inline-source-map',
+  devtool: 'eval',
 
   entry: {
     main: [
@@ -40,7 +40,8 @@ module.exports = webpackMerge(commonConfig, {
     new ExtractTextPlugin('[name].[hash].css'),
     new DefinePlugin({
       'process.env': {
-        'ENV': JSON.stringify(ENV)
+        'ENV': JSON.stringify(ENV),
+        'NODE_ENV': JSON.stringify(ENV)
       }
     }),
     new LoaderOptionsPlugin({
